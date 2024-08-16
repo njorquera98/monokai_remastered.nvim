@@ -4,7 +4,7 @@ local M = {}
 
 M.classic = {
   name = 'monokai',
-  base0 = '#222426',
+  base0 = '#0C0C0C',
   base1 = '#272a30',
   base2 = '#26292C',
   base3 = '#2E323C',
@@ -14,17 +14,17 @@ M.classic = {
   base7 = '#b1b1b1',
   base8 = '#e3e3e1',
   border = '#a1b5b1',
-  brown = '#504945',
-  white = '#f8f8f0',
-  grey = '#8F908A',
-  black = '#000000',
-  pink = '#f92672',
-  green = '#a6e22e',
-  aqua = '#66d9ef',
-  yellow = '#e6db74',
-  orange = '#fd971f',
-  purple = '#ae81ff',
-  red = '#e95678',
+  brown = '#625yE4C',
+  white = '#F6F6EF',
+  grey = '#C4C5B5',
+  black = '#1A1A1A',
+  pink = '#F4005F',
+  green = '#98e024',
+  aqua = '#58d1eb',
+  yellow = '#E0D561',
+  orange = '#FD971F',
+  purple = '#9D65FF',
+  red = '#f4005f',
   diff_add = '#3d5213',
   diff_remove = '#4a0f23',
   diff_change = '#27406b',
@@ -132,9 +132,18 @@ local function highlighter(config)
     local fg = color.fg and 'guifg = ' .. color.fg or 'guifg = NONE'
     local bg = color.bg and 'guibg = ' .. color.bg or 'guibg = NONE'
     local sp = color.sp and 'guisp = ' .. color.sp or ''
-  vim.cmd(
-    'highlight ' .. group .. ' ' .. style .. ' ' .. fg .. ' ' .. bg .. ' ' .. sp
-  )
+    vim.cmd(
+      'highlight '
+        .. group
+        .. ' '
+        .. style
+        .. ' '
+        .. fg
+        .. ' '
+        .. bg
+        .. ' '
+        .. sp
+    )
   end
 end
 
@@ -460,289 +469,289 @@ M.load_plugin_syntax = function(palette)
     style = 'underline',
   }
   return {
-    ["@annotation"] = {
+    ['@annotation'] = {
       fg = palette.green,
     },
-    ["@attribute"] = {
+    ['@attribute'] = {
       fg = palette.green,
     },
-    ["@boolean"] = {
+    ['@boolean'] = {
       fg = palette.purple,
     },
-    ["@character"] = {
+    ['@character'] = {
       fg = palette.yellow,
     },
-    ["@character.special"] = {
+    ['@character.special'] = {
       fg = palette.purple,
     },
-    ["@comment"] = {
+    ['@comment'] = {
       fg = palette.base6,
       style = 'italic',
     },
-    ["@conceal"] = {
+    ['@conceal'] = {
       fg = palette.grey,
     },
-    ["@conditional"] = {
+    ['@conditional'] = {
       fg = palette.pink,
     },
-    ["@conditional.ternary"] = {
+    ['@conditional.ternary'] = {
       fg = palette.pink,
     },
-    ["@constant"] = {
+    ['@constant'] = {
       fg = palette.aqua,
     },
-    ["@constant.builtin"] = {
+    ['@constant.builtin'] = {
       fg = palette.purple,
     },
-    ["@constant.macro"] = {
+    ['@constant.macro'] = {
       fg = palette.purple,
     },
-    ["@constructor"] = {
+    ['@constructor'] = {
       fg = palette.aqua,
     },
-    ["@debug"] = {
+    ['@debug'] = {
       fg = palette.pink,
     },
-    ["@define"] = {
+    ['@define'] = {
       fg = palette.aqua,
     },
-    ["@definition"] = {
+    ['@definition'] = {
       fg = palette.green,
     },
-    ["@definition.associated"] = {
+    ['@definition.associated'] = {
       fg = palette.green,
     },
-    ["@definition.constant"] = {
+    ['@definition.constant'] = {
       fg = palette.green,
     },
-    ["@definition.enum"] = {
+    ['@definition.enum'] = {
       fg = palette.green,
     },
-    ["@definition.field"] = {
+    ['@definition.field'] = {
       fg = palette.green,
     },
-    ["@definition.function"] = {
+    ['@definition.function'] = {
       fg = palette.green,
     },
-    ["@definition.import"] = {
+    ['@definition.import'] = {
       fg = palette.white,
     },
-    ["@definition.macro"] = {
+    ['@definition.macro'] = {
       fg = palette.green,
     },
-    ["@definition.method"] = {
+    ['@definition.method'] = {
       fg = palette.green,
     },
-    ["@definition.namespace"] = {
+    ['@definition.namespace'] = {
       fg = palette.white,
     },
-    ["@definition.parameter"] = {
+    ['@definition.parameter'] = {
       fg = palette.orange,
     },
-    ["@definition.type"] = {
+    ['@definition.type'] = {
       fg = palette.green,
     },
-    ["@definition.var"] = {
+    ['@definition.var'] = {
       fg = palette.green,
     },
-    ["@error"] = {
+    ['@error'] = {
       fg = palette.red,
     },
-    ["@exception"] = {
+    ['@exception'] = {
       fg = palette.pink,
     },
-    ["@field"] = {
+    ['@field'] = {
       fg = palette.white,
     },
-    ["@float"] = {
+    ['@float'] = {
       fg = palette.purple,
     },
-    ["@function"] = {
+    ['@function'] = {
       fg = palette.green,
       style = 'italic',
     },
-    ["@function.builtin"] = {
+    ['@function.builtin'] = {
       fg = palette.aqua,
     },
-    ["@function.call"] = {
+    ['@function.call'] = {
       fg = palette.white,
     },
-    ["@function.macro"] = {
+    ['@function.macro'] = {
       fg = palette.green,
       style = 'italic',
     },
-    ["@include"] = {
+    ['@include'] = {
       fg = palette.aqua,
       style = 'italic',
     },
-    ["@keyword"] = {
+    ['@keyword'] = {
       fg = palette.pink,
       style = 'italic',
     },
-    ["@keyword.function"] = {
+    ['@keyword.function'] = {
       fg = palette.aqua,
       style = 'italic',
     },
-    ["@keyword.operator"] = {
+    ['@keyword.operator'] = {
       fg = palette.pink,
     },
-    ["@keyword.return"] = {
+    ['@keyword.return'] = {
       fg = palette.pink,
     },
-    ["@label"] = {
+    ['@label'] = {
       fg = palette.pink,
     },
-    ["@math"] = math_group,
-    ["@method"] = {
+    ['@math'] = math_group,
+    ['@method'] = {
       fg = palette.green,
     },
-    ["@method.call"] = {
+    ['@method.call'] = {
       fg = palette.white,
     },
-    ["@namespace"] = {
+    ['@namespace'] = {
       fg = palette.purple,
     },
     -- ["@nospell"] = {},
-    ["@number"] = {
+    ['@number'] = {
       fg = palette.purple,
     },
-    ["@operator"] = {
+    ['@operator'] = {
       fg = palette.pink,
     },
-    ["@parameter"] = {
+    ['@parameter'] = {
       fg = palette.orange,
     },
-    ["@parameter.reference"] = {
+    ['@parameter.reference'] = {
       fg = palette.white,
     },
-    ["@preproc"] = {
+    ['@preproc'] = {
       fg = palette.green,
     },
-    ["@property"] = {
+    ['@property'] = {
       fg = palette.white,
     },
-    ["@punctuation.bracket"] = {
+    ['@punctuation.bracket'] = {
       fg = palette.white,
     },
-    ["@punctuation.delimiter"] = {
+    ['@punctuation.delimiter'] = {
       fg = palette.white,
     },
-    ["@punctuation.special"] = {
+    ['@punctuation.special'] = {
       fg = palette.pink,
     },
-    ["@reference"] = {
+    ['@reference'] = {
       fg = palette.white,
     },
-    ["@repeat"] = {
+    ['@repeat'] = {
       fg = palette.pink,
     },
-    ["@scope"] = {
+    ['@scope'] = {
       fg = palette.white,
     },
     -- ["@spell"] = {},
-    ["@storageclass"] = {
+    ['@storageclass'] = {
       fg = palette.aqua,
     },
-    ["@storageclass.lifetime"] = {
+    ['@storageclass.lifetime'] = {
       fg = palette.aqua,
     },
-    ["@strike"] = strike_group,
-    ["@string"] = {
+    ['@strike'] = strike_group,
+    ['@string'] = {
       fg = palette.yellow,
     },
-    ["@string.escape"] = {
+    ['@string.escape'] = {
       fg = palette.purple,
     },
-    ["@string.regex"] = {
+    ['@string.regex'] = {
       fg = palette.purple,
     },
-    ["@string.special"] = {
+    ['@string.special'] = {
       fg = palette.purple,
     },
-    ["@symbol"] = {
+    ['@symbol'] = {
       fg = palette.purple,
     },
-    ["@tag"] = {
+    ['@tag'] = {
       fg = palette.pink,
     },
-    ["@tag.attribute"] = {
+    ['@tag.attribute'] = {
       fg = palette.green,
     },
-    ["@tag.delimiter"] =  {
+    ['@tag.delimiter'] = {
       fg = palette.white,
     },
-    ["@text"] = {
+    ['@text'] = {
       fg = palette.green,
     },
-    ["@text.danger"] = {
+    ['@text.danger'] = {
       fg = palette.red,
       style = 'bold',
     },
-    ["@text.diff.add"] = {
+    ['@text.diff.add'] = {
       fg = palette.diff_add,
     },
-    ["@text.diff.delete"] = {
+    ['@text.diff.delete'] = {
       fg = palette.diff_remove,
     },
-    ["@text.emphasis"] = {
+    ['@text.emphasis'] = {
       style = 'bold',
     },
-    ["@text.environment"] = {
+    ['@text.environment'] = {
       fg = palette.purple,
     },
-    ["@text.environment.name"] = {
+    ['@text.environment.name'] = {
       fg = palette.aqua,
     },
-    ["@text.literal"] = {
+    ['@text.literal'] = {
       fg = palette.yellow,
     },
-    ["@text.math"] = math_group,
-    ["@text.note"] = {
+    ['@text.math'] = math_group,
+    ['@text.note'] = {
       fg = palette.aqua,
       style = 'bold',
     },
-    ["@text.quote"] = {
+    ['@text.quote'] = {
       fg = palette.grey,
     },
-    ["@text.reference"] = {
+    ['@text.reference'] = {
       fg = palette.orange,
       style = 'italic',
     },
-    ["@text.strike"] = strike_group,
-    ["@text.strong"] = {
+    ['@text.strike'] = strike_group,
+    ['@text.strong'] = {
       style = 'bold',
     },
-    ["@text.title"] = {
+    ['@text.title'] = {
       fg = palette.yellow,
       style = 'bold',
     },
-    ["@text.todo"] = todo_group,
-    ["@text.underline"] = {
+    ['@text.todo'] = todo_group,
+    ['@text.underline'] = {
       style = 'underline',
     },
-    ["@text.uri"] = uri_group,
-    ["@text.warning"] = {
+    ['@text.uri'] = uri_group,
+    ['@text.warning'] = {
       fg = palette.yellow,
       style = 'bold',
     },
-    ["@todo"] = todo_group,
-    ["@type"] = {
+    ['@todo'] = todo_group,
+    ['@type'] = {
       fg = palette.aqua,
     },
-    ["@type.builtin"] = {
+    ['@type.builtin'] = {
       fg = palette.aqua,
     },
-    ["@type.definition"] = {
+    ['@type.definition'] = {
       fg = palette.aqua,
     },
-    ["@type.qualifier"] = {
+    ['@type.qualifier'] = {
       fg = palette.pink,
     },
-    ["@uri"] = uri_group,
-    ["@variable"] = {
+    ['@uri'] = uri_group,
+    ['@variable'] = {
       fg = palette.white,
     },
-    ["@variable.builtin"] = {
+    ['@variable.builtin'] = {
       fg = palette.orange,
     },
     dbui_tables = {
@@ -894,11 +903,8 @@ M.setup = function(config)
     highlight(group, colors)
   end
   local plugin_syntax = M.load_plugin_syntax(used_palette)
-  plugin_syntax = vim.tbl_deep_extend(
-    'keep',
-    config.custom_hlgroups,
-    plugin_syntax
-  )
+  plugin_syntax =
+    vim.tbl_deep_extend('keep', config.custom_hlgroups, plugin_syntax)
   for group, colors in pairs(plugin_syntax) do
     highlight(group, colors)
   end
